@@ -6,7 +6,7 @@
 <body>
 		{{$a}} , {{$b}} , {{$c}}
 		<br>
-		@if($a ==1)
+		@if($a ==2)
 			buah manggis
 		@else
 		buah mangga

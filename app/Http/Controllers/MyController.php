@@ -48,10 +48,33 @@ class MyController extends Controller
     	$komputer = ['key board','mouse','cpu','monitor','ram'];
     	return view('buah', compact('buah'.'mahlukhidup'.'komputer'));
     }
+	
 
-    public function param($a)
+    public function paramm($data,$data2)
     {
-    	$a="buah";
-    	return $a;
-    }	
+        $datas=['buah' => ['Mangga','Jeruk','Apel','Anggur','Manggis'],
+                'mahlukhidup' => ['Manusia','hewan','tumbuhan','alien','burung'],
+                'komputer' => ['key board','mouse','cpu','monitor','ram'],
+                'mangga' => ['mangga gedong','mangga aromanis'],
+                'hewan' => ['harimau','kucing'],
+                'ram' => ['ram 32 gb','ram 16 gb']];
+                
+        $b=$datas [$data];
+        $b=$datas [$data2];
+        return view ("penyatuan", compact('b','data'));
+    }
+
+    public function paramm($data,$data2)
+    {
+        $datas=['buah' => ['Mangga','Jeruk','Apel','Anggur','Manggis'],
+                'mahlukhidup' => ['Manusia','hewan','tumbuhan','alien','burung'],
+                'komputer' => ['key board','mouse','cpu','monitor','ram'],
+                'mangga' => ['mangga gedong','mangga aromanis'],
+                'hewan' => ['harimau','kucing'],
+                'ram' => ['ram 32 gb','ram 16 gb']];  
+
+        $b=$datas [$data];
+        $b=$datas [$data2];
+        return view ("penyatuan", compact('b','data'));
+    }
 }
